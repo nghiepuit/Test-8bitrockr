@@ -1,0 +1,13 @@
+$font-bold: 700;
+$font-semibold: 600;
+$font-regular: 400;
+@mixin icon_right($color){
+  position: relative;
+  i{
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    color: $color;
+    font-size: 18px;
+  }
+}

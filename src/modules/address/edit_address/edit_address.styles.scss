@@ -1,0 +1,8 @@
+.errorField {
+  border: 1px solid $failure-color !important;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      border: 1px solid $failure-color !important;
+    }
+}

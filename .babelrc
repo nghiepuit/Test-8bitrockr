@@ -1,0 +1,53 @@
+{
+    "presets": [
+        ["env",
+        {
+            "targets":
+            {
+                "browsers": ["last 2 versions", "safari >= 7"]
+            },
+            "modules": false,
+            "loose": true,
+            "useBuiltIns": true
+        }]
+    ],
+    "plugins": [
+        "syntax-dynamic-import",
+        "transform-es2015-function-name",
+        "transform-export-default-name",
+        "transform-decorators-legacy", ["transform-class-properties",
+        {
+            "spec": true
+        }],
+        "transform-function-bind", ["module-resolver",
+        {
+            "root": ["./src"],
+            "alias":
+            {
+                "@modules": "./src/modules",
+                "@packages": "./packages",
+                "@commons": "./src/commons",
+                "@selectors": "./src/commons/selectors",
+                "@scss": "./src/commons/scss",
+                "@components": "./src/commons/components",
+                "@apis": "./src/commons/apis",
+                "@images": "./statics/media",
+                "@webpack": "./webpack"
+            }
+        }]
+    ],
+    "env":
+    {
+        "production":
+        {
+            "presets": ["react"]
+        },
+        "development":
+        {
+            "presets": ["react"],
+            "plugins": [
+                "transform-runtime"
+            ]
+        }
+    }
+}
